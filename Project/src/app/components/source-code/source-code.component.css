@@ -1,0 +1,151 @@
+.source {
+  background: rgb(29, 30, 34);
+}
+
+.source-code {
+  display: flex;
+  background: rgb(29, 30, 34);
+}
+
+.source-text {
+  width: 32%;
+  word-wrap: normal !important;
+  font-size: 1.6rem;
+  padding: 0 10px;
+  margin-top: 20px;
+}
+
+.source-text:not(:last-of-type) {
+  margin-right: 15px;
+}
+
+.source-text-first {
+  margin-left: 12px;
+}
+
+.source-text-last {
+  margin-right: 12px;
+}
+
+.source-desc {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+  height: 3rem;
+  background-color: rgb(68, 72, 87);
+  color: rgb(170, 174, 188);
+  display: flex;
+  border-bottom: 0.5px solid rgb(59, 60, 66);
+  box-shadow: rgb(59, 60, 66) 0.5px 0.5px 3px;
+  align-items: center;
+}
+
+.source-title {
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+}
+
+.source-toggle {
+  margin-left: auto;
+  margin-right: 10px;
+  height: 20px;
+  z-index: 20;
+  border: none;
+  padding: 0 8px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 5px #0a0a0a75;
+}
+
+.source-toggle:active,
+.source-toggle:focus {
+  outline: none;
+}
+
+.arrow {
+  width: 1rem;
+  height: auto;
+  vertical-align: middle;
+}
+
+.collapsed {
+  width: 135px;
+}
+
+.collapsed-div {
+  width: initial;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.source-iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.source-iframe-container {
+  height: 500px;
+}
+
+.source-status {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  font-size: 1.5rem;
+  margin: 7px 0 12px 0;
+}
+
+.source-status-desc {
+  font-family: "Roboto";
+  font-weight: 500;
+  color: #ece9e9;
+  margin-left: 4px;
+  margin-top: 2px;
+}
+
+.source-loading {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-width: 0.18em;
+}
+
+.source-placeholder {
+  height: 3.35rem;
+  margin: 7px 0 12px 0;
+}
+
+.source-error-desc {
+  margin-left: 2.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.source-error-text {
+  opacity: initial;
+  visibility: visible;
+  font-size: 1.5rem;
+  color: #fd3b3b;
+  margin-left: 5px;
+}
+
+.source-success-text {
+  opacity: initial;
+  visibility: visible;
+  font-size: 1.5rem;
+  color: rgb(36, 192, 36);
+  margin-left: 5px;
+}
+
+.source-info-circle {
+  font-size: 1.4rem;
+  color: #fd3b3b;
+  transform: translateY(0) scale(1);
+  transition: transform .4s;
+  margin-top: 1px;
+}
+
+.source-success {
+  color: rgb(36, 192, 36);
+}

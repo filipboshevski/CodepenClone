@@ -1,0 +1,16 @@
+.clip {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.font-size-1-6 {
+  font-size: 1.6rem !important;
+}
+
+.margin-top-15 {
+  margin-top: 1.5rem !important;
+}

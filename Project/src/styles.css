@@ -1,0 +1,146 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~codemirror/lib/codemirror.css';
+@import '~codemirror/theme/material.css';
+@import '~codemirror/addon/lint/lint.css';
+@import 'app/styles/utils.css';
+@import '~ngx-toastr/toastr.css';
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    background: #272931;
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+  /* Track */
+::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 2px grey;
+      border-radius: 10px;
+  }
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+      background: rgb(189, 189, 189);
+      border-radius: 10px;
+  }
+
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+      background: rgb(7, 7, 7);
+  }
+
+@-webkit-keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-border {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: text-bottom;
+  border: 0.25em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  -webkit-animation: spinner-border .75s linear infinite;
+  animation: spinner-border .75s linear infinite;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+.text-primary {
+  color: #007bff!important;
+}
+
+button {
+  appearance: auto !important;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto !important;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+.my-modal > div {
+  margin-top: 12% !important;
+}
+
+.my-modal-lite > div {
+  margin-top: 4% !important;
+}
+
+.my-modal .modal-header {
+  border-bottom: 1px solid #dadada !important;
+}
+
+.form-invalid-message {
+  color: rgba(223, 19, 19, 0.87);
+  font-size: 1.2rem;
+  font-family: inherit;
+}
+
+.form-invalid-input {
+  border-color:rgba(223, 19, 19, 0.87) !important;
+}
+
+#toast-container {
+  font-size: 14px !important;
+}

@@ -1,0 +1,87 @@
+.src-header {
+  font-weight: 700;
+  padding: 10px;
+}
+
+.src-header-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+.src-body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.src-reminder {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #9c8a8a;
+  margin-bottom: 1rem;
+}
+
+.src-span {
+  font-size: 1.4rem;
+  text-align: center;
+  color: red;
+  font-weight: 600;
+}
+
+.src-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 44rem;
+}
+
+.src-buttons {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.src-button {
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 1rem 2rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 600;
+  box-shadow: rgb(0 0 0 / 60%) 0px 1px 2px;
+  border-radius: 5px;
+  transform: scaleY(1) translateY(0px);
+  transition: all 0.3s ease 0s;
+}
+
+.src-button:active,
+.src-button:focus {
+  outline: none;
+}
+
+.src-button:active:hover {
+  transform: scale(.98) translateY(.15rem);
+}
+
+.src-classic {
+  background-color: rgb(0, 98, 211);
+  color: rgb(255, 255, 255);
+}
+
+.src-classic:hover {
+  background-color: rgb(2, 83, 177);
+}
+
+.src-red {
+  background-color: rgb(224, 36, 36);
+  color: rgb(255, 255, 255);
+}
+
+.src-red:hover {
+  background-color: rgb(196, 31, 31);
+}
