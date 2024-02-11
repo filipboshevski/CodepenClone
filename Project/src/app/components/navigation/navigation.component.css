@@ -1,0 +1,108 @@
+.navigation {
+    background: #1e1f26;
+    display: flex;
+    padding: 15px 0;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navigation-logo {
+    margin-left: 10px;
+    margin-right: 10px;
+    fill: #fff;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.project {
+    color: #fff;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-name {
+    padding: 0;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    margin: 0 !important;
+}
+
+.project-edit {
+    fill: #fff;
+    height: 15px;
+    width: 15px;
+    margin-left: 4px;
+}
+
+.project-change-name {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 174px;
+}
+
+.project-username {
+    padding: 0;
+    font-size: 1.5rem;
+    margin-top: -2px;
+    margin-bottom: 0 !important;
+}
+
+.options {
+    margin-left: auto;
+    color: #fff;
+}
+
+.options-buttons {
+    display: flex;
+}
+
+.custom-button {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  border: none;
+  padding: 1.4rem 2rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: white;
+  background-color: rgb(68, 72, 87);
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 8px;
+  border-radius: 5px;
+  transform: scaleY(1) translateY(0px);
+  transition: all 0.3s ease 0s;
+  margin-right: 1rem;
+}
+
+.custom-button:focus,
+.custom-button:active {
+  outline: none;
+}
+
+.custom-button:active:hover {
+  transform: scale(.98) translateY(.15rem);
+}
+
+.custom-button:hover {
+  background-color: rgb(88, 93, 111);
+}
+
+.signUpButton {
+  font-weight: 700;
+  color: black;
+  background-color: rgb(71, 207, 115);
+}
+
+.signUpButton:hover {
+  background-color: rgb(62, 174, 100) !important;
+}
+
+.project-title {
+  max-width: 400px;
+}

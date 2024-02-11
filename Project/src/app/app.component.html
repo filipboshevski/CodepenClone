@@ -1,0 +1,7 @@
+<div id="app">
+  <div *ngIf="!isLoading">
+    <app-navigation (onSessionRemove)="removeSession()" (handleSignUp)="handleSignUp($event)" (onSessionRetrieved)="setSession($event)" [userSession]="session"></app-navigation>
+    <source-code [sessionRemove]="sessionRemoveSubject$.asObservable()" [userSession]="session"></source-code>
+  </div>
+  <app-spinner *ngIf="isLoading"></app-spinner>
+</div>

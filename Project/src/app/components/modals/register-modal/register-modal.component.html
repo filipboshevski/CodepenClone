@@ -1,0 +1,51 @@
+<div class="modal-header login-header-container">
+  <h2 class="login-header">Register using your credentials</h2>
+</div>
+<div class="modal-body login-body register-body">
+  <h3 class="login-reminder">You can register using an email and password</h3>
+  <form [formGroup]="form" class="login-form" (submit)="onSubmit()">
+    <label for="name" class="login-label">Full name</label>
+    <input (change)="resetForm()" formControlName="name" name="name" [ngClass]="{'form-invalid-input': name!.touched && name!.hasError('isInvalidFullName')}" id="name" type="text" class="login-input" placeholder="Enter your full name">
+    <span
+      *ngIf="name!.hasError('isInvalidFullName') && name!.touched"
+      class="form-invalid-message">
+      Please enter a valid name and surname.
+    </span>
+    <label for="email" class="login-label">Email address</label>
+    <input (change)="resetForm()" formControlName="email" name="email" [ngClass]="{'form-invalid-input': email!.touched && email!.hasError('isInvalidEmail') || email!.hasError('containsWhiteSpace')}" id="email" type="text" class="login-input" placeholder="Enter your email address">
+    <span *ngIf="
+    (email!.touched && email!.invalid) ||
+      (email!.hasError('containsWhiteSpace') && email!.touched) ||
+      (email!.hasError('isInvalidEmail') && email!.touched)"
+      class="form-invalid-message">
+        Please enter a valid email address.
+    </span>
+    <label class="login-label">Password</label>
+    <input (change)="checkPasswords()" [ngClass]="{'form-invalid-input': password!.touched && password!.invalid}" formControlName="password" type="password" class="login-input" placeholder="Enter your password">
+    <span *ngIf="
+      (password!.hasError('containsWhiteSpace') && password!.touched && password!.invalid)"
+      class="form-invalid-message">
+        No white space allowed. <br>
+    </span>
+    <span *ngIf="
+      (password!.hasError('minLengthError') && password!.touched)"
+      class="form-invalid-message">
+        The minimum password length is 6. Your password is {{password!.value.length}} characters long. <br>
+    </span>
+    <span *ngIf="
+      (password!.hasError('isWeak') && password!.value.length >= 6)"
+      class="form-invalid-message">
+        Your password is weak. Type a stronger password.
+    </span>
+    <label class="login-label">Confirm password</label>
+    <input id="confirmpassword" (change)="checkPasswords()" formControlName="confirmpassword" type="password" class="login-input" placeholder="Confirm your password">
+    <span *ngIf="
+      (!arePasswordsSame && confirmPassword!.touched)"
+      class="form-invalid-message">
+        Passwords do not match.
+    </span>
+    <div class="login-buttons register-buttons">
+      <button class="login-button login-classic">Register</button>
+    </div>
+  </form>
+</div>

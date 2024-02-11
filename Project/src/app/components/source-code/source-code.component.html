@@ -1,0 +1,74 @@
+<div class="source">
+  <div class="source-code">
+    <div class="source-text source-text-first" [ngClass]="{'collapsed-div': isHtmlCollapsed, 'grow': isCssCollapsed && isJsCollapsed && !isHtmlCollapsed}">
+      <div class="source-desc" [ngClass]="{'collapsed': isHtmlCollapsed}">
+        <div class="source-title">HTML</div>
+        <button (click)="onMinimize($event)" id="html" class="source-toggle" type="button">
+            <img id="htmlarrow" class="arrow" alt="arrow" src="./assets/arrow-down-sign-to-navigate.png">
+        </button>
+      </div>
+      <ngx-codemirror #ref *ngIf="!isHtmlCollapsed" class="source-textarea" (input)="handleCodeChange(ref)" [(ngModel)]="html" [options]="{
+        lineNumbers: true,
+        theme: 'material',
+        mode: 'markdown',
+        lineWrapping: true}"></ngx-codemirror>
+      <div *ngIf="htmlLoading" class="source-status">
+        <div class="spinner-border text-primary source-loading" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <span class="source-status-desc">Loading....</span>
+      </div>
+    </div>
+    <div class="source-text" [ngClass]="{'collapsed-div': isCssCollapsed, 'grow': isHtmlCollapsed && isJsCollapsed && !isCssCollapsed}">
+      <div class="source-desc" [ngClass]="{'collapsed': isCssCollapsed}">
+        <div class="source-title">CSS</div>
+        <button (click)="onMinimize($event)" id="css" class="source-toggle" type="button">
+            <img id="cssarrow" class="arrow" alt="arrow" src="./assets/arrow-down-sign-to-navigate.png">
+        </button>
+      </div>
+      <ngx-codemirror #ref (input)="handleCodeChange(ref)" *ngIf="!isCssCollapsed" class="source-textarea" [(ngModel)]="css" [options]="{
+        lineNumbers: true,
+        theme: 'material',
+        mode: 'css',
+        lineWrapping: true}"></ngx-codemirror>
+      <div *ngIf="cssLoading" class="source-status">
+        <div class="spinner-border text-primary source-loading" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <span class="source-status-desc">Loading....</span>
+      </div>
+    </div>
+    <div class="source-text source-text-last" [ngClass]="{'collapsed-div': isJsCollapsed, 'grow': isHtmlCollapsed && isCssCollapsed && !isJsCollapsed}">
+      <div class="source-desc" [ngClass]="{'collapsed': isJsCollapsed}">
+        <div class="source-title">JavaScript</div>
+        <button (click)="onMinimize($event)" id="js" class="source-toggle" type="button">
+            <img id="jsarrow" class="arrow" alt="arrow" src="./assets/arrow-down-sign-to-navigate.png">
+        </button>
+      </div>
+      <ngx-codemirror #ref (input)="handleCodeChange(ref)" *ngIf="!isJsCollapsed" class="source-textarea" [(ngModel)]="js" [options]="{
+        lineNumbers: true,
+        theme: 'material',
+        mode: 'javascript',
+        lineWrapping: true}"></ngx-codemirror>
+      <div *ngIf="jsLoading" class="source-status">
+        <div class="spinner-border text-primary source-loading" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <span class="source-status-desc">Loading....</span>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!htmlLoading && !cssLoading && !jsLoading" class="source-code source-placeholder">
+    <div class="source-error-desc" *ngIf="error">
+      <i class="fa fa-info-circle source-info-circle"></i>
+      <span class="source-error-text">{{error}}</span>
+    </div>
+    <div class="source-error-desc" *ngIf="!error && codeSuccessful">
+      <i class="fa fa-info-circle source-info-circle source-success"></i>
+      <span class="source-success-text">Code compiled successfully</span>
+    </div>
+  </div>
+  <div class="source-iframe-container">
+    <iframe id="demo" [srcdoc]="sanitizedDoc" class="source-iframe"></iframe>
+  </div>
+</div>

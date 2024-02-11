@@ -1,0 +1,41 @@
+<div class="modal-header login-header-container">
+  <h2 class="login-header">Sign in with your account</h2>
+</div>
+<div class="modal-body login-body">
+  <h3 class="login-reminder">You can sign in using your email and password or with Google</h3>
+  <form [formGroup]="form" (submit)="onSubmit()" class="login-form">
+    <label for="email" class="login-label">Email Address</label>
+    <input (change)="isValid = null;" formControlName="email" id="email" type="text" class="login-input" [ngClass]="{'form-invalid-input': (email!.touched && email!.invalid)}" placeholder="Enter your email address here">
+    <span *ngIf="
+    (email!.touched && email!.invalid) ||
+      (email!.hasError('containsWhiteSpace') && email!.touched) ||
+      (email!.hasError('isInvalidEmail') && email!.touched)"
+      class="form-invalid-message">
+        Please enter a valid email address.
+    </span>
+    <label for="password" class="login-label">Password</label>
+    <input (change)="isValid = null;" [ngClass]="{'form-invalid-input': (password!.touched && password!.invalid)}" formControlName="password" type="password" class="login-input" placeholder="Enter your password here">
+    <span *ngIf="
+      (password!.hasError('containsWhiteSpace') && password!.touched && password!.invalid)"
+      class="form-invalid-message">
+        No white space allowed. <br>
+    </span>
+    <span *ngIf="
+      (password!.hasError('minLengthError') && password!.touched)"
+      class="form-invalid-message">
+        The minimum password length is 6. Your password is {{password!.value.length}} characters long. <br>
+    </span>
+    <span *ngIf="
+      (password!.hasError('isWeak') && password!.value.length >= 6)"
+      class="form-invalid-message">
+        Your password is weak. Type a stronger password.
+    </span>
+    <div class="login-buttons">
+      <button class="login-button login-classic" type="submit">Sign in</button>
+      <button class="login-button login-google" type="button" (click)="logInWithGoogle()">
+        Sign in with Google
+        <img class="login-google-icon" src="https://img.icons8.com/fluent/48/000000/google-logo.png" />
+      </button>
+    </div>
+  </form>
+</div>

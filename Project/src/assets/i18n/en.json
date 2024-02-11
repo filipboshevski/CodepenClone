@@ -1,0 +1,57 @@
+{
+  "form": {
+    "sign-in": {
+      "success": "Signed in successfully.",
+      "title": "Sign In"
+    },
+    "sign-up": {
+      "success": "Signed up successfully.",
+      "title": "Sign Up"
+    },
+    "sign-out": {
+      "success": "Signed out successfully.",
+      "title": "Sign Out"
+    },
+    "errors": {
+      "email-already-in-use": {
+        "code": "auth/email-already-in-use",
+        "message": "The email address is already in use by another account."
+      },
+      "invalid-email": {
+        "code": "auth/invalid-email",
+        "message": "Invalid email entered."
+      },
+      "invalid-credentials": {
+        "message": "Invalid credentials entered."
+      },
+      "network-request-failed": {
+        "code": "auth/network-request-failed",
+        "message": "Check your internet connection and try again."
+      },
+      "wrong-password": {
+        "message": "Wrong password. Try again.",
+        "code": "auth/wrong-password"
+      },
+      "user-not-found": {
+        "code": "auth/user-not-found",
+        "message": "There is no account associated with that email address."
+      }
+    }
+  },
+  "save-session": {
+    "title": "Save Session",
+    "success": "Saved session successfully.",
+    "error": "Failed to save session."
+  },
+  "title-change": {
+    "title": "Project Name",
+    "success": "Changed project name successfully.",
+    "error": "Failed to change title."
+  },
+  "navigation": {
+    "failed-to-sign-in-error": {
+      "title": "Failed To Sign In",
+      "message": "Failed to sign in. Please try again later."
+    }
+  }
+}
